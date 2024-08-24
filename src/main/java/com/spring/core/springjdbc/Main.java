@@ -15,12 +15,15 @@ public class Main {
 
         Student student = new Student();
             student.setStudentId(3);
-            student.setStudenttName("Saniya");
+            student.setStudenttName("Sanu");
             student.setAddress(address1);
 
 
-        int status=studentDao.saveStudent(student);
-        System.out.println(status);
+//        int status=studentDao.saveStudent(student);
+//        int status=studentDao.deleteStudents(student);
+//        int status=studentDao.updateStudent(student);
+
+//        System.out.println(status);
 
 
     }

@@ -14,5 +14,13 @@ public class StudentDao {
         String query="insert into students values( '"+e.getStudentId()+"','"+e.getStudenttName()+"','"+e.getAddress().getCity()+"')";
         return jdbcTemplate.update(query);
     }
+    public int updateStudent(Student e){
+        String query="update students set name=?,address=? where id=?";
+        return jdbcTemplate.update(query,e.getStudenttName(),e.getAddress().getCity(),e.getStudentId());
+    }
+    public int deleteStudents(Student e){
+        String query="delete from students where id=?";
+        return jdbcTemplate.update(query,e.getStudentId());
+    }
 
 }
